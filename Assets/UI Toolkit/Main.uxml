@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/USS/NewUSSFile.uss?fileID=7433441132597879392&amp;guid=85d0a7847dfba6143af535ee264fb5e2&amp;type=3#NewUSSFile" />
+    <engine:VisualElement name="ButtonPanel" class="MainButtons" style="flex-grow: 1; align-self: auto; align-items: center; justify-content: center; opacity: 1;">
+        <engine:Button text="New Game" name="Play" style="width: 200px; height: 50px;" />
+        <engine:Button text="Load" name="Load" style="width: 200px; height: 50px;" />
+        <engine:Button text="Settings" name="Settings" style="width: 200px; height: 50px;" />
+        <engine:Button text="Exit" name="Exit" style="width: 200px; height: 50px;" />
+    </engine:VisualElement>
+</engine:UXML>
