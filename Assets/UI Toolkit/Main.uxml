@@ -1,9 +1,16 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/USS/NewUSSFile.uss?fileID=7433441132597879392&amp;guid=85d0a7847dfba6143af535ee264fb5e2&amp;type=3#NewUSSFile" />
-    <engine:VisualElement name="ButtonPanel" class="MainButtons" style="flex-grow: 1; align-self: auto; align-items: center; justify-content: center; opacity: 1;">
-        <engine:Button text="New Game" name="Play" style="width: 200px; height: 50px;" />
-        <engine:Button text="Load" name="Load" style="width: 200px; height: 50px;" />
-        <engine:Button text="Settings" name="Settings" style="width: 200px; height: 50px;" />
-        <engine:Button text="Exit" name="Exit" style="width: 200px; height: 50px;" />
+    <engine:VisualElement name="MainPanel" style="flex-grow: 1; align-self: center; align-items: center; justify-content: center; opacity: 1; position: relative; top: auto; right: auto; align-content: center; flex-basis: auto;">
+        <engine:Button text="New Game" name="PlayBtn" style="width: 200px; height: 50px;" />
+        <engine:Button text="Load" name="LoadBtn" style="width: 200px; height: 50px;" />
+        <engine:Button text="Settings" name="SettingBtn" style="width: 200px; height: 50px;" />
+        <engine:Button text="Exit" name="ExitBtn" style="width: 200px; height: 50px;" />
+    </engine:VisualElement>
+    <engine:VisualElement name="ExitPanel" style="flex-grow: 1; position: absolute; align-self: center; justify-content: center; align-items: center; align-content: center; width: 190%; height: 200px; background-color: rgb(46, 46, 46); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; flex-direction: column; flex-wrap: nowrap; padding-top: 20px; padding-left: 0; padding-right: 0; flex-shrink: 1; padding-bottom: 20px;">
+        <engine:Label text="Are you Sure?" name="Label" style="flex-direction: column; flex-shrink: 1; flex-grow: 1; flex-wrap: nowrap; align-self: center; align-content: center; justify-content: center; color: rgb(255, 255, 255); align-items: center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-center; font-size: 30px; -unity-font-style: bold;" />
+        <engine:VisualElement name="BtnBox" style="flex-grow: 1; align-content: center; align-self: center; justify-content: center; align-items: center; flex-direction: row;">
+            <engine:Button text="Yes" display-tooltip-when-elided="false" name="YesBtn" style="font-size: 25px;" />
+            <engine:Button text="Cancel" name="CancelBtn" style="font-size: 25px;" />
+        </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>
