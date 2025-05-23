@@ -14,14 +14,18 @@ public class ButtonManager : MonoBehaviour
         var playBtn  = root.Q<VisualElement>("PlayBtn");
         var settingBtn = root.Q<VisualElement>("SettingBtn");
         var exitBtn = root.Q<VisualElement>("ExitBtn");
+        var yesBtn = root.Q<VisualElement>("YesBtn");
+        var cancelBtn = root.Q<VisualElement>("CancelBtn");
 
         playBtn.RegisterCallback<ClickEvent>(PlayBtnFunction);
         settingBtn.RegisterCallback<ClickEvent>(SettingBtnFunction);
         exitBtn.RegisterCallback<ClickEvent>(ExitBtnFunctoion);
+        yesBtn.RegisterCallback<ClickEvent>(YesBtnFunction);
+        cancelBtn.RegisterCallback<ClickEvent>(CancelBtnFunction);
 
         //Einblenden der MainPanel Buttons
-        var mainPanel = root.Q<VisualElement>("MainPanel");
-        mainPanel.style.display = DisplayStyle.Flex;
+        var mainBtns = root.Q<VisualElement>("MainBtns");
+        mainBtns.style.display = DisplayStyle.Flex;
 
         //Ausblenden des Exit Popups
         var exitPanel = root.Q<VisualElement>("ExitPanel");
@@ -39,16 +43,34 @@ public class ButtonManager : MonoBehaviour
     {
         //Ausblenden der MainPanel Buttons
         Debug.Log("Settings Button Clicked");
-        var mainPanel = root.Q<VisualElement>("MainPanel");
-        mainPanel.style.display = DisplayStyle.None;
+
+        var mainBtns = root.Q<VisualElement>("MainBtns");
+        mainBtns.style.display = DisplayStyle.None;
     }
 
     private void ExitBtnFunctoion(ClickEvent evt)
     {
         Debug.Log("Exit Button Clicked");
+
         var exitPanel = root.Q<VisualElement>("ExitPanel");
         exitPanel.style.display = DisplayStyle.Flex;
-        var mainPanel = root.Q<VisualElement>("MainPanel");
-        mainPanel.style.display = DisplayStyle.None;
+
+        var mainBtns = root.Q<VisualElement>("MainBtns");
+        mainBtns.style.display = DisplayStyle.None;
+    }
+
+    private void YesBtnFunction(ClickEvent evt)
+    {
+        Debug.Log("Exited Game");
+        Application.Quit();
+    }
+
+    private void CancelBtnFunction(ClickEvent evt)
+    {
+        var exitPanel = root.Q<VisualElement>("ExitPanel");
+        exitPanel.style.display = DisplayStyle.None;
+
+        var mainBtns = root.Q<VisualElement>("MainBtns");
+        mainBtns.style.display = DisplayStyle.Flex;
     }
 }

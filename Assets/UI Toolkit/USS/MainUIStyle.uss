@@ -1,4 +1,4 @@
-Button {
+.MainBtn {
     opacity: 1;
     font-size: 30px;
     -unity-font-style: bold;
@@ -17,7 +17,7 @@ Button {
     border-bottom-color: rgba(0, 0, 0, 0);
 }
 
-Button:hover {
+.MainBtn:hover {
     transition-duration: 0.5s;
     transition-timing-function: ease-out-cubic;
     scale: 1.1 1.1;
