@@ -1,3 +1,11 @@
+.MainBtn:hover {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-cubic;
+    scale: 1.1 1.1;
+    transition-delay: 0s;
+    background-color: rgb(165, 76, 64);
+}
+
 .MainBtn {
     opacity: 1;
     font-size: 30px;
@@ -15,12 +23,4 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
-}
-
-.MainBtn:hover {
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out-cubic;
-    scale: 1.1 1.1;
-    transition-delay: 0s;
-    background-color: rgb(165, 76, 64);
 }
