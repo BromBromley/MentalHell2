@@ -25,6 +25,6 @@
                 <engine:Button text="Cancel" name="CancelBtn" enabled="true" class="MainBtn" style="font-size: 25px;" />
             </engine:VisualElement>
         </engine:VisualElement>
-        <engine:Label text="DEVELOPER BUILD - WORK IN PROGRESS" name="DevBuild" style="padding-bottom: 16px; margin-left: 16px; color: rgba(255, 255, 255, 0.14); -unity-font-style: bold; font-size: 20px; opacity: 0.1; -unity-text-align: middle-left; white-space: nowrap; align-self: center; position: absolute; bottom: 0;" />
+        <engine:Label text="DEVELOPER BUILD - WORK IN PROGRESS" name="DevBuild" style="padding-bottom: 16px; margin-left: 16px; color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 20px; opacity: 0.01; -unity-text-align: middle-left; white-space: nowrap; align-self: center; position: absolute; bottom: 0;" />
     </engine:VisualElement>
 </engine:UXML>
