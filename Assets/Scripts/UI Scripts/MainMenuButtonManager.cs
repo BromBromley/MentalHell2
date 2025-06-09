@@ -4,26 +4,36 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtonManager : MonoBehaviour
 {
-    [SerializeField] UIDocument uiDocument;
+    [SerializeField] private UIDocument uiDocument;
+
     private VisualElement root;
+    private VisualElement mainBtns;
+    private VisualElement settingsPanel;
+    private VisualElement creditsPanel;
+    private VisualElement exitPanel;
     
     void Start()
     {
         root = uiDocument.rootVisualElement;
 
-        var playBtn  = root.Q<VisualElement>("PlayBtn");
-        var settingBtn = root.Q<VisualElement>("SettingBtn");
-        var creditsBtn = root.Q<VisualElement>("CreditsBtn");
-        var exitBtn = root.Q<VisualElement>("ExitBtn");
-        var yesBtn = root.Q<VisualElement>("YesBtn");
-        var cancelBtn = root.Q<VisualElement>("CancelBtn");
-        var backBtnSettings = root.Q<VisualElement>("BackBtnSettings");
-        var backBtnCredits = root.Q<VisualElement>("BackBtnCredits");
+        mainBtns = root.Q<VisualElement>("MainBtns");
+        settingsPanel = root.Q<VisualElement>("SettingsPanel");
+        creditsPanel = root.Q<VisualElement>("CreditsPanel");
+        exitPanel = root.Q<VisualElement>("ExitPanel");
+
+        var playBtn  = root.Q<Button>("PlayBtn");
+        var settingBtn = root.Q<Button>("SettingBtn");
+        var creditsBtn = root.Q<Button>("CreditsBtn");
+        var exitBtn = root.Q<Button>("ExitBtn");
+        var yesBtn = root.Q<Button>("YesBtn");
+        var cancelBtn = root.Q<Button>("CancelBtn");
+        var backBtnSettings = root.Q<Button>("BackBtnSettings");
+        var backBtnCredits = root.Q<Button>("BackBtnCredits");
 
         playBtn.RegisterCallback<ClickEvent>(PlayBtnFunction);
         settingBtn.RegisterCallback<ClickEvent>(SettingBtnFunction);
         creditsBtn.RegisterCallback<ClickEvent>(CreditsBtnFunction);
-        exitBtn.RegisterCallback<ClickEvent>(ExitBtnFunctoion);
+        exitBtn.RegisterCallback<ClickEvent>(ExitBtnFunction);
         yesBtn.RegisterCallback<ClickEvent>(YesBtnFunction);
         cancelBtn.RegisterCallback<ClickEvent>(CancelBtnFunction);
         backBtnSettings.RegisterCallback<ClickEvent>(BackBtnSettingsFunction);
@@ -32,65 +42,39 @@ public class MainMenuButtonManager : MonoBehaviour
 
     private void PlayBtnFunction(ClickEvent evt)
     {   
-        //Scene Switch zu Level1
+        //Scene Switch zu Graveyard Scene
         Debug.Log("Play Button Clicked");
         SceneManager.LoadScene (sceneBuildIndex:1);
     }
 
     private void SettingBtnFunction(ClickEvent evt)
     {
-        //Ausblenden der MainPanel Buttons
         Debug.Log("Settings Button Clicked");
-
-        var mainBtns = root.Q<VisualElement>("MainBtns");
-        mainBtns.style.display = DisplayStyle.None;
-        
-        var settingsPanel = root.Q<VisualElement>("SettingsPanel");
-        settingsPanel.style.display = DisplayStyle.Flex;
+        ShowPanel(settingsPanel);
     }
 
     private void BackBtnSettingsFunction(ClickEvent evt)
     {
-        Debug.Log("Went back to Menu");
-
-        var settingsPanel = root.Q<VisualElement>("SettingsPanel");
-        settingsPanel.style.display = DisplayStyle.None;
-
-        var mainBtns = root.Q<VisualElement>("MainBtns");
-        mainBtns.style.display = DisplayStyle.Flex;
+        Debug.Log("Went back to Menu from Settings");
+        BackToMainFrom(settingsPanel);
     }
 
     private void CreditsBtnFunction(ClickEvent evt)
     {
         Debug.Log("Credits Button Clicked");
-
-        var mainBtns = root.Q<VisualElement>("MainBtns");
-        mainBtns.style.display = DisplayStyle.None;
- 
-        var creditsPanel = root.Q<VisualElement>("CreditsPanel");
-        creditsPanel.style.display = DisplayStyle.Flex;
+        ShowPanel(creditsPanel);
     }
 
     private void BackBtnCreditsFunction(ClickEvent evt)
     {
         Debug.Log("Went back to Menu");
-
-        var creditsPanel = root.Q<VisualElement>("CreditsPanel");
-        creditsPanel.style.display = DisplayStyle.None;
-
-        var mainBtns = root.Q<VisualElement>("MainBtns");
-        mainBtns.style.display = DisplayStyle.Flex;
+        BackToMainFrom(creditsPanel);
     }
 
-    private void ExitBtnFunctoion(ClickEvent evt)
+    private void ExitBtnFunction(ClickEvent evt)
     {
         Debug.Log("Exit Button Clicked");
-
-        var exitPanel = root.Q<VisualElement>("ExitPanel");
-        exitPanel.style.display = DisplayStyle.Flex;
-
-        var mainBtns = root.Q<VisualElement>("MainBtns");
-        mainBtns.style.display = DisplayStyle.None;
+        ShowPanel(exitPanel);
     }
 
     private void YesBtnFunction(ClickEvent evt)
@@ -101,10 +85,19 @@ public class MainMenuButtonManager : MonoBehaviour
 
     private void CancelBtnFunction(ClickEvent evt)
     {
-        var exitPanel = root.Q<VisualElement>("ExitPanel");
-        exitPanel.style.display = DisplayStyle.None;
+        Debug.Log("Cancelled Exit");
+        BackToMainFrom(exitPanel);
+    }
 
-        var mainBtns = root.Q<VisualElement>("MainBtns");
+    private void ShowPanel(VisualElement panelToShow)
+    {
+        mainBtns.style.display = DisplayStyle.None;
+        panelToShow.style.display = DisplayStyle.Flex;
+    }
+
+    private void BackToMainFrom(VisualElement panelToHide)
+    {
+        panelToHide.style.display = DisplayStyle.None;
         mainBtns.style.display = DisplayStyle.Flex;
     }
 }
