@@ -24,3 +24,71 @@
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
 }
+
+#ResolutionDrop Label {
+    color: white;
+    font-size: 24px;
+    -unity-font-style: bold;
+}
+
+#ResolutionDrop Label:focus {
+    color: white;
+}
+
+#ResolutionDrop PopupTextElement {
+    width: 180px;
+    font-size: 22px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    height: 20px;
+    padding-right: 0;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+#ResolutionDrop VisualElement {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgb(165, 76, 64);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    font-size: 22px;
+}
+
+#QualityDrop Label {
+    color: white;
+    font-size: 24px;
+    -unity-font-style: bold;
+}
+
+#QualityDrop Label:focus {
+    color: white;
+}
+
+#QualityDrop PopupTextElement {
+    width: 180px;
+    font-size: 22px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    height: 20px;
+    padding-right: 0;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+#QualityDrop VisualElement {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgb(165, 76, 64);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    font-size: 22px;
+}
