@@ -7669,6 +7669,7 @@ GameObject:
   - component: {fileID: 1494079566}
   - component: {fileID: 1494079565}
   - component: {fileID: 1494079567}
+  - component: {fileID: 1494079568}
   m_Layer: 5
   m_Name: LevelUI
   m_TagString: Untagged
@@ -7723,6 +7724,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiDocument: {fileID: 1494079565}
+--- !u!114 &1494079568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494079563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75dbd4eaa109a3469e359c8bc9ba344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1544540382
 GameObject:
   m_ObjectHideFlags: 0
