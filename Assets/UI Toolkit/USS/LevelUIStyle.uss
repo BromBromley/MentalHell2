@@ -1,9 +1,24 @@
 .Button {
-    background-color: rgb(46, 46, 46);
+    background-color: rgba(46, 46, 46, 0);
+    background-image: url("project://database/Assets/Art/UI/Main_Button.png?fileID=21300000&guid=3421305574fcf9344aa57d1f3ccdacac&type=3#Main_Button");
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    color: rgb(229, 189, 255);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    min-width: 180px;
+    min-height: 50px;
+    font-size: 20px;
 }
 
 .Button:hover {
-    background-color: rgb(165, 76, 64);
-    transition-timing-function: ease-out-cubic;
-    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    background-image: url("project://database/Assets/Art/UI/Active_Button.png?fileID=21300000&guid=c5e90090b6157e044ab1290008a32b39&type=3#Active_Button");
+    background-color: rgba(165, 76, 64, 0);
+    scale: 1.04 1.04;
+    color: rgb(222, 8, 255);
 }

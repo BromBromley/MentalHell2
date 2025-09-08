@@ -1,9 +1,9 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/USS/LevelUIStyle.uss?fileID=7433441132597879392&amp;guid=1a31c4648c1cccb4e9c468af57912ebe&amp;type=3#LevelUIStyle" />
     <engine:VisualElement name="MAIN" style="flex-grow: 1;">
-        <engine:VisualElement name="DevUI" style="flex-wrap: nowrap; flex-direction: row-reverse;">
-            <engine:Button text="Main Menu" name="MainMenuBtn" enabled="true" class="Button" style="width: 130px; align-self: flex-end; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; border-top-right-radius: 8px; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 17px; margin-top: 10px; margin-right: 10px;" />
-            <engine:Button text="Reload" name="ReloadBtn" class="Button" style="width: 130px; align-self: flex-end; border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; border-top-right-radius: 8px; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 17px; margin-top: 10px; margin-right: 10px;" />
+        <engine:VisualElement name="DevUI" style="flex-wrap: nowrap; flex-direction: row-reverse; align-self: auto;">
+            <engine:Button text="Main Menu" name="MainMenuBtn" class="Button" style="align-self: center;" />
+            <engine:Button text="Reload" name="ReloadBtn" class="Button" style="align-self: center;" />
         </engine:VisualElement>
         <engine:Label text="DEVELOPER BUILD - WORK IN PROGRESS" name="DevBuild" style="padding-bottom: 16px; margin-left: 16px; color: rgb(0, 0, 0); -unity-font-style: bold; font-size: 20px; opacity: 0.4; -unity-text-align: middle-left; white-space: nowrap; align-self: center; position: absolute; bottom: 0;" />
     </engine:VisualElement>
