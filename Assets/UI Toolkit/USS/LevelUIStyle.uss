@@ -22,3 +22,32 @@
     scale: 1.04 1.04;
     color: rgb(222, 8, 255);
 }
+
+.InvenSlot {
+    width: 70px;
+    height: 70px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-left-color: rgb(43, 0, 40);
+    border-right-color: rgb(43, 0, 40);
+    border-top-color: rgb(43, 0, 40);
+    border-bottom-color: rgb(43, 0, 40);
+    background-color: rgb(91, 0, 101);
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    font-size: 20px;
+}
+
+.InvenSlot:hover {
+    background-color: rgb(142, 0, 115);
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+}
