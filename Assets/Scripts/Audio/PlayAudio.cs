@@ -32,8 +32,8 @@ public class PlayAudio : MonoBehaviour {
                 case "IntroSequence":
                     //Invoke(nameof(PlayIntroSequenceSoundtrack), 0);
                     break;
-                case "Level01":
-                    //Invoke(nameof(PlayLevel01Soundtrack), 0.25f);
+                case "MainMenu":
+                    Invoke(nameof(PlayNeverGonnaGiveYouUp), 0.25f);
                     break;
                 default:
                     Debug.Log("No soundtrack for scene: " + sceneName);

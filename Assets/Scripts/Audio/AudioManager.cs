@@ -48,6 +48,7 @@ public class AudioManager : MonoBehaviour {
 
     // make Audiomanager Accessable from everywhere
     public static AudioManager instance;
+
     // Arrays for the Sound types
 
     public Sound[] sounds;   // only ONE Array with all sounds

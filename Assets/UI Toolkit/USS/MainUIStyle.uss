@@ -25,87 +25,59 @@
     border-bottom-color: rgba(0, 0, 0, 0);
 }
 
-#ResolutionDrop Label {
-    color: white;
+.SettingSlider {
+    padding-bottom: 20px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
     font-size: 24px;
-    -unity-font-style: bold;
+    width: 375px;
 }
 
-#ResolutionDrop Label:focus {
-    color: white;
-}
-
-#ResolutionDrop PopupTextElement {
-    width: 180px;
-    font-size: 22px;
-    -unity-font-style: bold;
-    -unity-text-align: middle-center;
-    height: 20px;
-    padding-right: 0;
-    margin-right: 10px;
-    margin-left: -10px;
-}
-
-#ResolutionDrop VisualElement {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: rgb(165, 76, 64);
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    font-size: 22px;
-}
-
-#QualityDrop Label {
-    color: white;
-    font-size: 24px;
-    -unity-font-style: bold;
-}
-
-.MainBtn {
-    opacity: 1;
-    font-size: 22px;
-    -unity-font-style: bold;
-    margin-top: 20px;
-    overflow: visible;
-    display: flex;
-    color: rgb(229, 189, 255);
+.unity-popup-field__input {
     background-image: url("project://database/Assets/Art/UI/Main_Button.png?fileID=21300000&guid=3421305574fcf9344aa57d1f3ccdacac&type=3#Main_Button");
-    -unity-background-image-tint-color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+    background-size: 100% 100%;
+    width: 215px;
+    height: 50px;
 }
 
-#QualityDrop Label:focus {
-    color: white;
-}
-
-#QualityDrop PopupTextElement {
-    width: 180px;
-    font-size: 22px;
+.DropDown {
+    color: rgb(229, 189, 255);
     -unity-font-style: bold;
-    -unity-text-align: middle-center;
-    height: 20px;
-    padding-right: 0;
-    margin-right: 10px;
-    margin-left: -10px;
+    font-size: 20px;
+    -unity-text-align: middle-left;
+    display: flex;
+    visibility: visible;
 }
 
-#QualityDrop VisualElement {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: rgb(165, 76, 64);
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    font-size: 22px;
+#MainPanel > #SettingsPanel > #ResolutionDrop > .unity-popup-field__input > .unity-base-popup-field__arrow {
+    display: none;
+    overflow: visible;
+}
+
+#MainPanel > #SettingsPanel > #QualityDrop > .unity-popup-field__input > .unity-base-popup-field__arrow {
+    display: none;
+    visibility: visible;
+}
+
+#MainPanel > #SettingsPanel > #ResolutionDrop > .unity-popup-field__input > .unity-base-popup-field__text {
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    -unity-text-align: middle-center;
+    margin-right: 0;
+}
+
+#MainPanel > #SettingsPanel > #QualityDrop > .unity-popup-field__input > .unity-base-popup-field__text {
+    margin-right: 0;
+    align-content: center;
+    align-self: center;
+    justify-content: flex-end;
+    align-items: center;
+    -unity-text-align: middle-center;
 }

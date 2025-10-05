@@ -50,7 +50,7 @@ MonoBehaviour:
     type: 0
     clip: {fileID: 8300000, guid: fa9b4831fc77d1840b5d467172f15852, type: 3}
     output: {fileID: -1081846834231089781, guid: 79b68fdc91bb649438432d8d66aec442, type: 2}
-    volume: 1
+    volume: 0.2
     pitch: 1
     loop: 1
     spatialBlend: 0
