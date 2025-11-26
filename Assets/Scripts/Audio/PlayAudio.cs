@@ -29,11 +29,11 @@ public class PlayAudio : MonoBehaviour {
                 case "Graveyard":
                     Invoke(nameof(PlayNeverGonnaGiveYouUp), 0.25f);
                     break;
-                case "IntroSequence":
+                //case "IntroSequence":
                     //Invoke(nameof(PlayIntroSequenceSoundtrack), 0);
-                    break;
+                    //break;
                 case "MainMenu":
-                    Invoke(nameof(PlayNeverGonnaGiveYouUp), 0.25f);
+                    Invoke(nameof(PlayCaverns), 0.25f);
                     break;
                 default:
                     Debug.Log("No soundtrack for scene: " + sceneName);
@@ -54,11 +54,10 @@ public class PlayAudio : MonoBehaviour {
         Debug.Log("Playing Intro Sequence Soundtrack");
         audioManager.Play("IntroSequence");
     }
-
-    private void PlayLevel01Soundtrack() {
-        Debug.Log("Playing Level01 Soundtrack");
-        audioManager.Play("SoundtrackLayer1", 3.0f);
-    }
     */
 
+    private void PlayCaverns() {
+        Debug.Log("Playing Caverns Soundtrack");
+        audioManager.Play("Caverns", 3.0f);
+    }
 }

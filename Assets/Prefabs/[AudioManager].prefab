@@ -57,6 +57,17 @@ MonoBehaviour:
     maxDistance: 0
     minDistance: 0
     rolloffMode: 0
+  - name: Caverns
+    type: 0
+    clip: {fileID: 8300000, guid: 3b3ddf017d1bdbd4c903589966fd7cf1, type: 3}
+    output: {fileID: -1081846834231089781, guid: 79b68fdc91bb649438432d8d66aec442, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    spatialBlend: 0
+    maxDistance: 0
+    minDistance: 0
+    rolloffMode: 0
 --- !u!114 &640576710958100552
 MonoBehaviour:
   m_ObjectHideFlags: 0
